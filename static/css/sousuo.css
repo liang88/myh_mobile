@@ -1,0 +1,28 @@
+html, body { position: relative; height: 100%; }
+
+body { max-width: 11.71875rem; margin: 0 auto; color: #000; background: #fff; padding: 0; }
+
+p { padding: 0; }
+
+.clear:before, .clear:after { content: ""; width: 100%; height: 0; display: block; clear: both; }
+
+.clear { zoom: 1; }
+
+header { width: 100%; }
+header .bottom { width: 100%; height: 1.375rem; background: #fff; }
+header .bottom a { display: block; width: 10%; height: 1.375rem; float: left; }
+header .bottom a img { display: block; height: 0.6875rem; margin: 0.34375rem auto; }
+header .bottom .sosu { width: 80%; height: 0.78125rem; margin-top: 0.29688rem; border: 0.01563rem solid #66cc00; box-sizing: border-box; -moz-box-sizing: border-box; /* Firefox */ -webkit-box-sizing: border-box; /* Safari */ float: left; }
+header .bottom .sosu form { width: 100%; height: 100%; }
+header .bottom .sosu form input { display: block; width: 95%; height: 90%; margin: 0 auto; border: none; background: transparent; outline: none; font-size: 0.4375rem; }
+header .bottom .sosu form input:focus { color: #66cc00; text-shadow: 0px 0px 0px #666; -webkit-text-fill-color: transparent; }
+
+nav .lishi { width: 100%; height: 1.03125rem; background: #eee; }
+nav .lishi p { width: 80%; height: 1.03125rem; margin: 0 auto; font-size: 0.4375rem; color: #333; line-height: 1.03125rem; }
+nav .ls-con { width: 100%; height: 1.03125rem; background: #fff; border-bottom: 0.01563rem solid #eee; margin-bottom: 0.15625rem; }
+nav .ls-con a { display: block; width: 80%; height: 1.03125rem; margin: 0 auto; font-size: 0.4375rem; color: #333; line-height: 1.03125rem; }
+nav .tuijian { width: 100%; height: 1.03125rem; background: #eee; }
+nav .tuijian p { width: 90%; height: 1.03125rem; margin: 0 auto; font-size: 0.4375rem; color: #333; line-height: 1.03125rem; }
+nav .tj-con { width: 100%; height: 1.03125rem; background: #fff; }
+nav .tj-con p { width: 90%; height: 1.03125rem; margin: 0 auto; font-size: 0.4375rem; color: #333; }
+nav .tj-con p a { display: inline-block; padding: 0.125rem 0.15625rem; border: 0.01563rem solid #ccc; border-radius: 0.07813rem; margin: 0.15625rem 0.3125rem 0 0; color: #333; }

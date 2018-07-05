@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+.product1-fangdai body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,form,button,input,textarea,fieldset,blockquote,img,iframe,pre,code,hr,legend
+{
+  padding: 0;
+  margin: 0
+}
+
+.product1-fangdai body {
+  color: #333;
+  font: 12px Arial, Helvetica, sans-serif, Simsun;
+
+
+}
+
+.product1-fangdai h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+.product1-fangdai ol,ul {
+  list-style: none
+}
+
+.product1-fangdai img {
+  border: 0;
+  vertical-align: top
+}
+
+.product1-fangdai input,select,input,textarea {
+  font-size: 12px;
+  outline: 0
+}
+
+.product1-fangdai select,input {
+  vertical-align: middle
+}
+
+.product1-fangdai input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"]>input[type="button"]::-moz-focus-inner
+{
+  border: 0;
+  padding: 0;
+  margin-bottom:
+}
+
+.product1-fangdai textarea {
+  resize: none
+}
+
+.product1-fangdai fieldset {
+  border: 0
+}
+
+.product1-fangdai table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+.product1-fangdai caption,th {
+  text-align: left
+}
+
+.product1-fangdai address,cite,code,em,th,i,strong {
+  font-style: normal;
+  font-weight: normal
+}
+
+.product1-fangdai a {
+  text-decoration: none;
+  outline: 0
+}
+
+.product1-fangdai a:hover {
+  text-decoration: none
+}
+
+.product1-fangdai body {
+  font-family: "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", tahoma,
+  arial, simhei;
+  color: #333
+}
+
+
+esslike-itemtitle:hover {
+  color: #f60;
+  text-decoration: underline
+}
+
+.guesslike-itemprice {
+  color: #f60;
+  font-size: 14px;
+  font-weight: bold
+}
+
+.guesslike-itemdetail {
+  color: #666
+}
+
+.guesslike-itemcommunity {
+  color: #454545
+}
+
+.w1180 {
+  width: 1180px;
+  margin: 20px auto 0
+}
+
+.calcontent {
+  margin-bottom: 20px;
+  width: 1178px;
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: block;
+  overflow: hidden;
+}
+
+.calcontent .calleft {
+  float: left;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  border-right: 1px solid #dcdcdc
+}
+
+.calcontent .calleft .item-top {
+  margin-top: 30px
+}
+
+.calcontent .calleft .pop {
+  z-index: 1
+}
+
+.calcontent .calleft .adTop {
+  margin-top: 8px
+}
+
+.calcontent .calleft .across {
+  height: 0;
+  width: 488px;
+  margin: 16px 0 25px 50px;
+  _margin-top: 0;
+  border-bottom: 1px dashed #d9d9d9
+}
+
+.calcontent .calleft .item-mod {
+  color: #333;
+  padding-left: 90px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px
+}
+
+.calcontent .calleft .item-mod .sl {
+  float: left;
+  padding-right: 8px
+}
+
+.calcontent .icon-help {
+  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: -2px;
+  *vertical-align: middle;
+  _margin-top: 13px;
+  _margin-bottom: 13px
+}
+
+.calcontent .calleft .int-radio {
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 4px;
+  margin-top: 0px;
+  margin-bottom: 3px
+}
+
+.calcontent .calleft .r1 {
+  margin-left: 0
+}
+
+.calcontent .calleft .item-mod .warn {
+  display: none;
+  color: #f00;
+  font-size: 14px;
+  padding-left: 12px
+}
+
+.calcontent .calleft .item-mod .item-label {
+  float: left;
+  width: 112px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  margin-left: -113px;
+  text-align: center
+}
+
+.calcontent .calleft .item-mod .textbox {
+  top: 4px;
+  height: 32px;
+  width: 242px;
+  float: left;
+  position: relative
+}
+
+.calcontent .calleft .item-mod .textbox input {
+  float: left;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  z-index: 2;
+  font-size: 14px;
+  padding: 0 12px;
+  border: 1px solid #e3e3e3;
+  background-color: transparent
+}
+
+.calcontent .calleft .item-mod .textbox em {
+  _filter: alpha(opacity = 0);
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 11px;
+  z-index: 1;
+  color: #999;
+  width: 48px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: left
+}
+
+.calcontent .calleft .item-mod .short {
+  width: 90px
+}
+
+.calcontent .calleft .item-mod .short input {
+  width: 64px;
+  z-index: 1
+}
+
+.calcontent .calleft .item-mod .mid {
+  width: 163px
+}
+
+.calcontent .calleft .item-mod .mid input {
+  width: 137px
+}
+
+.calcontent .calleft .item-mod .selectbox {
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+  float: left;
+  width: 270px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  color: #333
+}
+
+.calcontent .calleft .item-mod .sel-time {
+  width: 90px
+}
+
+.calcontent .calleft .item-mod .selectbox select {
+  display: none
+}
+
+.calcontent .calleft .item-mod .sin-text {
+  float: left;
+  padding: 0 9px 0 7px
+}
+
+.calcontent .calleft .item-mod .cr {
+  padding-right: 0
+}
+
+.calcontent .calleft .item-bot {
+  margin-top: 41px;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.calcontent .calleft .item-bot .cal-button {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #019858;
+  border-radius: 3px
+}
+
+.calcontent .calleft .item-bot .cal-reset {
+  color: #333;
+  font-size: 14px;
+  margin-left: 16px
+}
+
+.calcontent .calleft .icon-tricut {
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  margin-top: -15px
+}
+
+.calcontent .calright {
+  max-width:414px;
+  width:100%;
+  height: 100%;
+  display: block;
+  clear: both;
+  position: relative;
+  padding-top:40px;
+}
+
+.calcontent .calright .default {
+  height: 211px
+}
+
+.calcontent .calright .default i {
+  width: 130px;
+  height: 90px;
+  display: inline-block;
+  /*background-image:*/
+  /*url(../images/calc.png)*/
+}
+
+.calcontent .calright .default p {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+.calcontent .calright .resultContent {
+  width: 100%;
+  margin: 30px auto
+}
+
+.calcontent .calright .resultContent table {
+  width: 100%;
+  font-size: 14px;
+  background: #fff;
+  margin-bottom: 16px;
+  border-collapse: collapse
+}
+
+.calcontent .calright .resultContent table thead {
+  color: #666
+}
+
+.calcontent .calright .resultContent table tbody {
+  color: #333
+}
+
+.calcontent .calright .resultContent table th,.calcontent .calright .resultContent table td
+{
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  font-weight: normal;
+  height: 43px;
+  line-height: 43px;
+  background: #fff
+}
+
+.calcontent .calright .resultContent table th {
+  width: 107px;
+  background-color: #f8f8f8
+}
+
+.calcontent .calright .resultContent table th .icon-wedge {
+  zoom: 1;
+  _display: block
+}
+
+.calcontent .calright .resultContent table tbody td {
+  font-size: 16px
+}
+
+.calcontent .calright .resultContent .doublec tbody td {
+  width: 178px
+}
+
+.calcontent .calright .resultContent table tbody td em {
+  color: #f60;
+  padding-right: 4px
+}
+
+.calcontent .calright .resultContent .result-tip {
+  color: #999;
+  font-size: 13px;
+  _margin-top: -14px
+}
+
+.calcontent .calright .resultContent .result-link {
+  color: #06c;
+  display: block;
+  font-size: 14px;
+  margin-top: 16px;
+  _margin-top: 2px
+}
+
+.calcontent .calright .resultContent .result-link em {
+  color: #f60
+}
+
+.icon-arrow {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -15px;
+  _right: -17px;
+  top: 50%;
+  margin-top: -14px;
+  border-left: 15px solid #c9c9c9;
+  border-top: 15px dashed transparent;
+  border-bottom: 15px dashed transparent
+}
+
+.icon-arrow span {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: -16px;
+  top: -15px;
+  border-left: 15px solid #fff;
+  border-top: 15px dashed transparent;
+  border-bottom: 15px dashed transparent
+}
+
+
+.advWrap .advBox {
+  float: right
+}
+
+.advWrap .guesslike-content {
+  float: left
+}
+
+.p_crumbs a:link,.p_crumbs a:visited {
+  color: #666
+}
+
+.p_crumbs a:hover {
+  color: #f60;
+  text-decoration: underline
+}
+
+.pre-detail {
+  float: left;
+  margin-right: 9px
+}
+
+.calcontent .calright .default {
+
+  text-align: center;
+}
+
+
+
+.am-panel-hd{
+  font-size: 26px;
+  line-height: 40px;
+  padding: 0px 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,461 @@
+@function rem($px){
+	@return $px/64px*1rem;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+	max-width: rem(750px);
+	margin: 0 auto;
+    color:#000;
+    background: #f0f0f0;
+    padding: 0;
+}
+// @media (min-width: 320px){html{font-size: 42.6667px;} }
+// @media (min-width: 360px){html{font-size: 48px;} }
+// @media (min-width: 375px){html{font-size: 50px;} }
+// @media (min-width: 384px){html{font-size: 51.2px;} }
+// @media (min-width: 414px){html{font-size: 55.2px;} }
+// @media (min-width: 448px){html{font-size: 59.7333px;} }
+// @media (min-width: 480px){html{font-size: 48px;} }
+// @media (min-width: 512px){html{font-size: 68.2667px;} }
+// @media (min-width: 544px){html{font-size: 72.5333px;} }
+// @media (min-width: 576px){html{font-size: 76.8px;} }
+// @media (min-width: 608px){html{font-size: 81.0667px;} }
+// @media (min-width: 640px){html{font-size: 85.3333px;} }
+// @media (min-width: 750px){html{font-size: 100px;} }
+p{
+	padding: 0;
+}
+.clear:before,.clear:after {
+	content: "";
+	width: 100%;
+	height: 0;
+	display: block;
+	clear: both;
+}
+.clear {
+	zoom: 1;
+}
+header{
+	width: 100%;
+	.bottom{
+		width: 100%;
+		height: rem(88px);
+		background: #fff;
+		a{
+			display: block;
+			width: 15%;
+			height: rem(88px);
+			float: left;
+			img{
+				display: block;
+				height: rem(44px);
+				margin: rem(22px) auto;
+			}
+		}
+		.sosu{
+			width: 70%;
+			height: rem(50px);
+			margin-top: rem(19px);
+			border: rem(1px) solid #66cc00;
+			box-sizing:border-box;
+			-moz-box-sizing:border-box; /* Firefox */
+			-webkit-box-sizing:border-box; /* Safari */
+			float: left;
+			div{
+				width: rem(300px);
+				margin: 0 auto;
+				p{
+					font-size: rem(28px);
+					text-align: center;
+					line-height: rem(50px);
+					margin-left: rem(15px);
+					color: #999;
+					float: left;
+				}
+				img{
+					height: rem(30px);
+					margin-top: rem(10px);
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+nav{
+	width: 100%;
+	background: #fff;
+	.banner{
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+	.tubiao{
+		width: 90%;
+		height: rem(150px);
+		margin: 0 auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		a{
+			display: block;
+			width: 25%;
+			height: rem(100px);
+			margin-top: rem(25px);
+			position: relative;
+			justify-content: center;
+			align-items: center;
+			-webkit-align-items: center;
+			img{
+				display: block;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 31%;
+				z-index: 1;
+			}
+			p{
+				text-align: center;
+				font-size: rem(30px);
+				color: #000;
+				margin-top: rem(65px);
+				position: relative;
+				z-index: 9;
+			}
+		}
+	}
+	.re{
+		width: 100%;
+		border-top: rem(15px) solid #f0f0f0;
+		.tit{
+			display: block;
+			width: 100%;
+			height: rem(58px);
+			background: #fff;
+			border-bottom: rem(2px) solid #f0f0f0;
+			position: relative;
+			.kuai{
+				width: rem(6px);
+				height: rem(30px);
+				background: #66cc00;
+				position: absolute;
+				top: rem(14px);
+				left: 0;
+			}
+			.zhong{
+				width: 94%;
+				height: rem(44px);
+				margin: 0 auto;
+				position: relative;
+				p{
+					font-size: rem(30px);
+					color: #000;
+					font-weight: bold;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+				.sanjiao{
+					width: rem(24px);
+					height: rem(24px);
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.nei{
+			display: block;
+			width: 100%;
+			height: rem(160px);
+			padding: rem(30px) 0;
+			border-bottom: rem(4px) solid #f0f0f0;
+			.nei-z{
+				width: 94%;
+				height: 100%;
+				margin: 0 auto;
+				.nei-z-l{
+					width: 36%;
+					height: rem(160px);
+					float: left;
+					overflow: hidden;
+					img{
+						height: 100%;
+					}
+				}
+				.nei-z-r{
+					width: 60%;
+					height: rem(160px);
+					float: right;
+					.x-tit{
+						width: 100%;
+						height: rem(28px);
+						p:nth-child(1){
+							font-size: rem(28px);
+							color: #333;
+							font-weight: 800;
+							line-height: rem(28px);
+							float: left;
+						}
+						p:nth-child(2){
+							font-size: rem(22px);
+							color: #ff9900;
+							line-height: rem(28px);
+							float: right;
+						}
+					}
+					p{
+						span{
+							color: #ff9900;
+						}
+					}
+					.p1{
+						font-size: rem(24px);
+						color:#666;
+						padding: rem(30px) 0 rem(15px) 0;
+					}
+					.p2{
+						font-size: rem(24px);
+						color:#666;
+					}
+					.kuai-zi{
+						width: 100%;
+						margin-top: rem(12px);
+						span{
+							display: inline-block;
+							float: left;
+							font-size: rem(18px);
+							padding: rem(4px) rem(9px);
+						}
+						span:nth-child(1){
+							background: #d8fdde;
+							color: #5ccc2c;
+						}
+						span:nth-child(2){
+							background: #b2ddff;
+							color: #249fff;
+							margin-left: rem(12px);
+						}
+					}
+				}
+			}
+		}
+		.gengd{
+			display: block;
+			width: 100%;
+			height: rem(62px);
+			font-size: rem(32px);
+			color: #66cc00;
+			text-align: center;
+			line-height: rem(62px);
+		}
+	}
+	.tu{
+		width: 100%;
+		border-top: rem(18px) solid #f0f0f0;
+		border-bottom: rem(18px) solid #f0f0f0;
+		img{
+			width: 100%;
+		}
+	}
+	.yishou{
+		.tit{
+			display: block;
+			width: 100%;
+			height: rem(58px);
+			background: #fff;
+			border-bottom: rem(2px) solid #f0f0f0;
+			position: relative;
+			.kuai{
+				width: rem(6px);
+				height: rem(30px);
+				background: #66cc00;
+				position: absolute;
+				top: rem(14px);
+				left: 0;
+			}
+			.zhong{
+				width: 94%;
+				height: rem(44px);
+				margin: 0 auto;
+				position: relative;
+				p{
+					font-size: rem(30px);
+					color: #000;
+					font-weight: bold;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+				.sanjiao{
+					width: rem(24px);
+					height: rem(24px);
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.nei{
+			display: block;
+			width: 100%;
+			height: rem(160px);
+			padding: rem(30px) 0;
+			border-bottom: rem(4px) solid #f0f0f0;
+			.nei-z{
+				width: 94%;
+				height: 100%;
+				margin: 0 auto;
+				.nei-z-l{
+					width: 36%;
+					height: rem(160px);
+					float: left;
+					overflow: hidden;
+					img{
+						height: 100%;
+					}
+				}
+				.nei-z-r{
+					width: 60%;
+					height: rem(160px);
+					float: right;
+					position: relative;
+					.x-tit{
+						width: 100%;
+						height: rem(28px);
+						p{
+							font-size: rem(28px);
+							color: #333;
+							font-weight: 800;
+							line-height: rem(28px);
+							float: left;
+						}
+					}
+					.p1{
+						font-size: rem(24px);
+						color:#666;
+						padding: rem(30px) 0 rem(15px) 0;
+					}
+					.p2{
+						font-size: rem(24px);
+						color:#666;
+					}
+					.kuai-zi{
+						width: 100%;
+						margin-top: rem(12px);
+						span{
+							display: inline-block;
+							float: left;
+							font-size: rem(18px);
+							padding: rem(4px) rem(9px);
+						}
+						span:nth-child(1){
+							background: #d8fdde;
+							color: #5ccc2c;
+						}
+						span:nth-child(2){
+							background: #b2ddff;
+							color: #249fff;
+							margin-left: rem(12px);
+						}
+						span:nth-child(3){
+							background: #ffe0b2;
+							color: #ff9900;
+							margin-left: rem(12px);
+						}
+					}
+					.ding{
+						font-size: rem(24px);
+						color: #ff6633;
+						position: absolute;
+						right: 0;
+						top: 50%;
+					}
+				}
+			}
+		}
+		.gengd{
+			display: block;
+			width: 100%;
+			height: rem(62px);
+			font-size: rem(32px);
+			color: #66cc00;
+			text-align: center;
+			line-height: rem(62px);
+		}
+	}
+	.kongbai{
+		width: 100%;
+		height: rem(80px);
+		background: #f0f0f0;
+	}
+}
+footer{
+	width: 100%;
+	height: auto;
+	background: #222;
+	.f-top{
+		width: 94%;
+		height: rem(66px);
+		margin: 0 auto;
+		border-bottom: rem(1px) solid #666;
+		font-size: rem(20px);
+		color: #666;
+		text-align: left;
+		line-height: rem(66px);
+	}
+	.xiangmu{
+		width: 94%;
+		height: rem(340px);
+		margin: 0 auto;
+		padding: rem(24px) 0;
+		p{
+			width: rem(194px);
+			height: rem(64px);
+			text-align: center;
+			line-height: rem(64px);
+			font-size: rem(28px);
+			font-weight: bold;
+			color: #999;
+			background: #333;
+		}
+		ul{
+			width: 50%;
+			float: left;
+			li{
+				padding: rem(15px) 0;
+				a{
+					color: #666;
+					font-size: rem(24px);
+				}
+			}
+		}
+	}
+	.shangbiao{
+		width: 100%;
+		height: rem(78px);
+		border-top: rem(2px) solid #666;
+		p{
+			font-size: rem(16px);
+			color: #666;
+			text-align: center;
+			margin-top: rem(18px);
+			a{
+				color: #666;
+			}
+		}
+	}
+}

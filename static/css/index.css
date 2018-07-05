@@ -1,0 +1,96 @@
+html, body { position: relative; height: 100%; }
+
+body { max-width: 11.71875rem; margin: 0 auto; color: #000; background: #f0f0f0; padding: 0; }
+
+p { padding: 0; }
+
+.clear:before, .clear:after { content: ""; width: 100%; height: 0; display: block; clear: both; }
+
+.clear { zoom: 1; }
+
+header { width: 100%; }
+header .bottom { width: 100%; height: 1.375rem; background: #fff; }
+header .bottom a { display: block; width: 15%; height: 1.375rem; float: left; }
+header .bottom a img { display: block; height: 0.6875rem; margin: 0.34375rem auto; }
+header .bottom .sosu { width: 70%; height: 0.78125rem; margin-top: 0.29688rem; border: 0.01563rem solid #66cc00; box-sizing: border-box; -moz-box-sizing: border-box; /* Firefox */ -webkit-box-sizing: border-box; /* Safari */ float: left; }
+header .bottom .sosu div { width: 4.6875rem; margin: 0 auto; }
+header .bottom .sosu div p { font-size: 0.4375rem; text-align: center; line-height: 0.78125rem; margin-left: 0.23438rem; color: #999; float: left; }
+header .bottom .sosu div img { height: 0.46875rem; margin-top: 0.15625rem; float: left; }
+.soubtn {
+  display: block;
+  width: 15%;
+  height: 1.375rem;
+  float: left;
+  border: none;
+  background: none;
+  font-size:0.43rem;
+}
+header .bottom .sosu2 { width: 70%; height: 0.78125rem; margin-top: 0.29688rem;padding-left: 0.8rem; border: 0.01563rem solid #66cc00; box-sizing: border-box; -moz-box-sizing: border-box; /* Firefox */ -webkit-box-sizing: border-box; /* Safari */ float: left;text-align: left;background:url("../images/sousuo.png");background-repeat: no-repeat;background-position: 3% center; background-size: auto 70%;font-size:0.43rem;}
+
+nav { width: 100%; background: #fff; }
+nav .banner { width: 100%; }
+nav .banner img { width: 100%; }
+nav .tubiao { width: 90%; height: 2.34375rem; margin: 0 auto; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; }
+nav .tubiao a { display: block; width: 25%; margin-top: 0.39063rem; justify-content: center; align-items: center; -webkit-align-items: center; }
+nav .tubiao a img { display: block; width: 1.14063rem; height: 1.14063rem; margin: 0 auto; }
+nav .tubiao a p { text-align: center; font-size: 0.46875rem; color: #000; margin-top: 0.09375rem; }
+nav .re { width: 100%; border-top: 0.23438rem solid #f0f0f0; }
+nav .re .tit { display: block; width: 100%; height: 0.90625rem; background: #fff; border-bottom: 0.03125rem solid #f0f0f0; position: relative; }
+nav .re .tit .kuai { width: 0.09375rem; height: 0.46875rem; background: #66cc00; position: absolute; top: 0.21875rem; left: 0; }
+nav .re .tit .zhong { width: 94%; height: 0.6875rem; margin: 0 auto; position: relative; }
+nav .re .tit .zhong p { font-size: 0.46875rem; color: #000; font-weight: bold; position: absolute; bottom: 0; left: 0; }
+nav .re .tit .zhong .sanjiao { width: 0.375rem; height: 0.375rem; position: absolute; bottom: 0; right: 0; }
+nav .re .tit .zhong .sanjiao img { width: 100%; }
+nav .re .nei { display: block; width: 100%; height: 2.5rem; padding: 0.46875rem 0; border-bottom: 0.0625rem solid #f0f0f0; }
+nav .re .nei .nei-z { width: 94%; height: 100%; margin: 0 auto; }
+nav .re .nei .nei-z .nei-z-l { width: 36%; height: 2.5rem; float: left; overflow: hidden; }
+nav .re .nei .nei-z .nei-z-l img { height: 100%;width:100% }
+nav .re .nei .nei-z .nei-z-r { width: 60%; height: 2.5rem; float: right; }
+nav .re .nei .nei-z .nei-z-r .x-tit { width: 100%; height: 0.4375rem; }
+nav .re .nei .nei-z .nei-z-r .x-tit p:nth-child(1) { font-size: 0.4375rem; color: #333; font-weight: 800; line-height: 0.4375rem; float: left; }
+nav .re .nei .nei-z .nei-z-r .x-tit p:nth-child(2) { font-size: 0.34375rem; color: #ff9900; line-height: 0.4375rem; float: right; }
+nav .re .nei .nei-z .nei-z-r p span { color: #ff9900; }
+nav .re .nei .nei-z .nei-z-r .p1 { font-size: 0.375rem; color: #666; padding: 0.26875rem 0 0.23438rem 0; }
+nav .re .nei .nei-z .nei-z-r .p2 { font-size: 0.375rem; color: #666; }
+nav .re .nei .nei-z .nei-z-r .kuai-zi { width: 100%; margin-top: 0.1875rem; }
+nav .re .nei .nei-z .nei-z-r .kuai-zi span { display: inline-block; float: left; font-size: 0.28125rem; padding: 0.0625rem 0.10063rem; }
+nav .re .nei .nei-z .nei-z-r .kuai-zi span:nth-child(1) { background: #d8fdde; color: #5ccc2c; }
+nav .re .nei .nei-z .nei-z-r .kuai-zi span:nth-child(2) { background: #d8fdde; color: #5ccc2c;  margin-left: 0.1875rem; }
+nav .re .nei .nei-z .nei-z-r .kuai-zi span:nth-child(3) { background: #d8fdde; color: #5ccc2c;  margin-left: 0.1875rem; }
+nav .re .gengd { display: block; width: 100%; height: 0.96875rem; font-size: 0.43rem; color: #66cc00; text-align: center; line-height: 0.96875rem;margin-top:10px; margin-bottom:10px;border-bottom: 0.23438rem solid #f0f0f0;}
+nav .tu { width: 100%; border-top: 0.28125rem solid #f0f0f0; border-bottom: 0.28125rem solid #f0f0f0; }
+nav .tu img { width: 100%; }
+nav .yishou .tit { display: block; width: 100%; height: 0.90625rem; background: #fff; border-bottom: 0.03125rem solid #f0f0f0; position: relative; }
+nav .yishou .tit .kuai { width: 0.09375rem; height: 0.46875rem; background: #66cc00; position: absolute; top: 0.21875rem; left: 0; }
+nav .yishou .tit .zhong { width: 94%; height: 0.6875rem; margin: 0 auto; position: relative; }
+nav .yishou .tit .zhong p { font-size: 0.46875rem; color: #000; font-weight: bold; position: absolute; bottom: 0; left: 0; }
+nav .yishou .tit .zhong .sanjiao { width: 0.375rem; height: 0.375rem; position: absolute; bottom: 0; right: 0; }
+nav .yishou .tit .zhong .sanjiao img { width: 100%; }
+nav .yishou .nei { display: block; width: 100%; height: 2.5rem; padding: 0.46875rem 0; border-bottom: 0.0625rem solid #f0f0f0; }
+nav .yishou .nei .nei-z { width: 94%; height: 100%; margin: 0 auto; }
+nav .yishou .nei .nei-z .nei-z-l { width: 36%; height: 2.5rem; float: left; overflow: hidden; }
+nav .yishou .nei .nei-z .nei-z-l img { height: 100%; }
+nav .yishou .nei .nei-z .nei-z-r { width: 60%; height: 2.5rem; float: right; position: relative; }
+nav .yishou .nei .nei-z .nei-z-r .x-tit { width: 100%; height: 0.4375rem; }
+nav .yishou .nei .nei-z .nei-z-r .x-tit p { font-size: 0.4375rem; color: #333; font-weight: 800; line-height: 0.4375rem; float: left; }
+nav .yishou .nei .nei-z .nei-z-r .p1 { font-size: 0.375rem; color: #666; padding: 0.26875rem 0 0.23438rem 0; }
+nav .yishou .nei .nei-z .nei-z-r .p2 { font-size: 0.375rem; color: #666; }
+nav .yishou .nei .nei-z .nei-z-r .kuai-zi { width: 100%; margin-top: 0.1875rem; }
+nav .yishou .nei .nei-z .nei-z-r .kuai-zi span { display: inline-block; float: left; font-size: 0.28125rem; padding: 0.0625rem 0.14063rem; }
+nav .yishou .nei .nei-z .nei-z-r .kuai-zi span:nth-child(1) { background: #d8fdde; color: #5ccc2c; }
+nav .yishou .nei .nei-z .nei-z-r .kuai-zi span:nth-child(2) { background: #d8fdde;color: #5ccc2c; /*b2ddffcolor: #249fff; */ margin-left: 0.1875rem; }
+nav .yishou .nei .nei-z .nei-z-r .kuai-zi span:nth-child(3) { background: #d8fdde;color: #5ccc2c; /*ffe0b2color: #ff9900; */ margin-left: 0.1875rem; }
+nav .yishou .nei .nei-z .nei-z-r .ding { font-size: 0.375rem; color: #ff6633; position: absolute; right: 0; top: 12%; }
+nav .yishou .gengd { display: block; width: 100%; height: 0.96875rem; font-size: 0.43rem; color: #66cc00; text-align: center; line-height: 0.96875rem; margin-top:10px; margin-bottom:10px;}
+nav .kongbai { width: 100%; height: 1.25rem; background: #f0f0f0; }
+
+footer { width: 100%; height: auto; background: #222; }
+footer .f-top { width: 94%; height: 1.03125rem; margin: 0 auto; border-bottom: 0.01563rem solid #666; font-size: 0.3125rem; color: #666; text-align: left; line-height: 1.03125rem; }
+footer .xiangmu { width: 94%; height: 5.3125rem; margin: 0 auto; padding: 0.375rem 0; }
+footer .xiangmu p { width: 3.03125rem; height: 1rem; text-align: center; line-height: 1rem; font-size: 0.4375rem; font-weight: bold; color: #999; background: #333; }
+footer .xiangmu ul { width: 100%; float: left; }
+footer .xiangmu ul li { padding: 0.23438rem 0;width: 50%; float: left; }
+footer .xiangmu ul li a { color: #666; font-size: 0.375rem; }
+footer .shangbiao { width: 100%; height: 1.21875rem; border-top: 0.03125rem solid #666; }
+footer .shangbiao p { font-size: 0.25rem; color: #666; text-align: center; margin-top: 0.28125rem; }
+footer .shangbiao p a { color: #666; }

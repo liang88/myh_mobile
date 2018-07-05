@@ -1,0 +1,181 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  max-width: 11.71875rem;
+  margin: 0 auto;
+  color: #000;
+  background: #fff;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+}
+
+input {
+  outline: none;
+}
+
+input:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.clear:before, .clear:after {
+  content: "";
+  width: 100%;
+  height: 0;
+  display: block;
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+}
+
+header {
+  width: 100%;
+}
+header .bottom {
+  width: 100%;
+  height: 1.375rem;
+  background: #eee;
+}
+header .bottom a {
+  display: block;
+  width: 15%;
+  height: 1.375rem;
+  float: left;
+}
+header .bottom a img {
+  display: block;
+  height: 0.6875rem;
+  margin: 0.34375rem auto;
+}
+header .bottom .sosu {
+  width: 70%;
+  height: 0.78125rem;
+  margin-top: 0.29688rem;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  float: left;
+}
+header .bottom .sosu p {
+  font-size: 0.4375rem;
+  text-align: center;
+  line-height: 0.78125rem;
+  color: #000;
+}
+header .bottom .zhuce {
+  text-align: center;
+  line-height: 1.375rem;
+  font-size: 0.4375rem;
+  color: #66cc33;
+}
+
+nav {
+  width: 100%;
+}
+nav form {
+  width: 90%;
+  margin: 1.01563rem auto;
+}
+nav form .zh {
+  width: 100%;
+  height: 0.46875rem;
+  padding: 0.54688rem 0;
+  border-bottom: 0.01563rem solid #eee;
+}
+nav form .zh p {
+  width: 20%;
+  font-size: 0.40625rem;
+  line-height: 0.46875rem;
+  color: #000;
+  float: left;
+}
+nav form .zh input {
+  width: 50%;
+  height: 0.40625rem;
+  border: none;
+  font-size: 0.40625rem;
+  float: right;
+}
+nav form .zh span {
+  float: right;
+  width: 25%;
+  height: 0.5rem;
+  background: transparent;
+  font-size: 0.3125rem;
+  color: #999;
+  text-align: center;
+  line-height: 0.5rem;
+  border: none;
+  padding: 0;
+  outline: none;
+  border: 1px solid #e5e5e5;
+}
+nav form .yzm {
+  width: 100%;
+  height: 0.46875rem;
+  padding: 0.54688rem 0;
+  border-bottom: 0.01563rem solid #eee;
+}
+nav form .yzm p {
+  width: 20%;
+  font-size: 0.40625rem;
+  line-height: 0.46875rem;
+  color: #000;
+  float: left;
+}
+nav form .yzm input {
+  width: 75%;
+  height: 0.40625rem;
+  border: none;
+  font-size: 0.40625rem;
+  float: right;
+}
+nav form .mm {
+  width: 100%;
+  height: 0.46875rem;
+  padding: 0.54688rem 0;
+  border-bottom: 0.01563rem solid #eee;
+}
+nav form .mm p {
+  width: 20%;
+  font-size: 0.40625rem;
+  line-height: 0.46875rem;
+  color: #000;
+  float: left;
+}
+nav form .mm input {
+  width: 75%;
+  height: 0.40625rem;
+  border: none;
+  font-size: 0.40625rem;
+  float: right;
+}
+nav form .but {
+  width: 100%;
+  height: 1.46875rem;
+  margin-top: 1.5625rem;
+  background: #e5e5e5;
+  font-size: 0.46875rem;
+  color: #666;
+  font-weight: 800;
+  border: none;
+  padding: 0;
+  outline: none;
+  border-radius: 0.07813rem;
+  transition: all 0.1s;
+}

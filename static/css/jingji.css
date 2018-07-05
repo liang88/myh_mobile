@@ -1,0 +1,132 @@
+html, body { position: relative; height: 100%; }
+
+body { max-width: 11.71875rem; margin: 0 auto; color: #000; background: #f0f0f0; padding: 0; }
+
+p { padding: 0; }
+
+.clear:before, .clear:after { content: ""; width: 100%; height: 0; display: block; clear: both; }
+
+.clear { zoom: 1; }
+
+header { width: 100%; }
+header .bottom { width: 100%; height: 1.375rem; background: #fff; }
+header .bottom a { display: block; width: 15%; height: 1.375rem; float: left; }
+header .bottom a img { display: block; height: 0.6875rem; margin: 0.34375rem auto; }
+header .bottom .sosu { width: 70%; height: 0.78125rem; margin-top: 0.29688rem; box-sizing: border-box; -moz-box-sizing: border-box; /* Firefox */ -webkit-box-sizing: border-box; /* Safari */ float: left; }
+header .bottom .sosu p { font-size: 0.4375rem; text-align: center; line-height: 0.78125rem; color: #333; }
+
+nav { width: 100%; }
+nav .tit { width: 100%; background: #fff; border-top: 0.01563rem solid #ececec; border-bottom: 0.01563rem solid #ececec; padding: 0.46875rem 0 0.23438rem 0; }
+nav .tit .tit-middle { width: 88%; margin: 0 auto; }
+nav .tit .tit-middle .pic { width: 25%; border-radius: 50%; float: left; overflow: hidden; }
+nav .tit .tit-middle .pic img { width: 100%; }
+nav .tit .tit-middle .message { width: 60%; margin-left: 0.3125rem; float: left; }
+nav .tit .tit-middle .message p:nth-child(1) { font-size: 0.4375rem; color: #000; margin-bottom: 0.23438rem; }
+nav .tit .tit-middle .message p:nth-child(2) { font-size: 0.375rem; color: #666; margin: 0.23438rem 0; }
+nav .tit .tit-middle .message p:nth-child(3) { font-size: 0.375rem; color: #666; margin: 0.23438rem 0; }
+nav .tit .tit-middle .message .message-tag { width: 105%; }
+nav .tit .tit-middle .message .message-tag span { display: inline-block; padding: 0.07813rem 0.07813rem; background: #e5f5ff; border-radius: 0.07813rem; color: #0091ff; margin: 0 0.07813rem 0.125rem 0; font-size: 0.3125rem; }
+nav .tit .tit-middle .medal { width: 10%; float: right; }
+nav .tit .tit-middle .medal img { width: 0.85938rem; }
+nav .number-t { width: 100%; background: #fff; padding: 0.46875rem 0 0.3125rem 0; }
+nav .number-t .number { width: 90%; margin: 0 auto; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; }
+nav .number-t .number div { justify-content: center; width: 33%; }
+nav .number-t .number div p { text-align: center; }
+nav .number-t .number div p:nth-child(1) { font-size: 0.59375rem; color: #000; }
+nav .number-t .number div p:nth-child(2) { font-size: 0.34375rem; color: #666; margin-top: 0.3125rem; }
+nav .pj { width: 100%; background: #fff; border-bottom: 0.01563rem solid #ececec; }
+nav .pj .pj-middle { width: 88%; margin: 0 auto; padding: 0.34375rem 0; }
+nav .pj .pj-middle p { font-size: 0.375rem; color: #000; }
+nav .kongbai { width: 100%; padding: 0.125rem 0; height: 0; }
+nav .pingjia-wap { width: 100%; background: #fff; }
+nav .pingjia-wap .pingjia { width: 100%; padding: 0.35938rem 0; border-bottom: 0.01563rem solid #ececec; }
+nav .pingjia-wap .pingjia .pingjia-middle { width: 88%; margin: 0 auto; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-pic { width: 20%; float: left; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-pic .pic-kap { width: 1.5rem; border-radius: 50%; overflow: hidden; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-pic .pic-kap img { width: 100%; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing { width: 80%; float: right; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .name { width: 100%; margin-top: 0.3125rem; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .name p { float: left; font-size: 0.40625rem; color: #000; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .name div { float: right; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .name div img { display: block; float: left; width: 0.3125rem; height: 0.3125rem; margin-left: 0.15625rem; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .day { margin-top: 0.25rem; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .day p { color: #666; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .day p:nth-child(1) { float: left; font-size: 0.34375rem; }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-xing .day p:nth-child(2) { float: right; font-size: 0.3125rem; }
+
+footer { width: 100%; height: auto; background: #222; margin-bottom: 1.64063rem; }
+footer .f-top { width: 94%; height: 1.03125rem; margin: 0 auto; border-bottom: 0.01563rem solid #666; font-size: 0.3125rem; color: #666; text-align: left; line-height: 1.03125rem; }
+footer .xiangmu { width: 94%; height: 5.3125rem; margin: 0 auto; padding: 0.375rem 0; display: none; }
+footer .xiangmu p { width: 3.03125rem; height: 1rem; text-align: center; line-height: 1rem; font-size: 0.4375rem; font-weight: bold; color: #999; background: #333; }
+footer .xiangmu ul { width: 50%; float: left; }
+footer .xiangmu ul li { padding: 0.23438rem 0; }
+footer .xiangmu ul li a { color: #666; font-size: 0.375rem; }
+footer .shangbiao { width: 100%; height: 1.21875rem; padding-bottom: 0.78125rem; }
+footer .shangbiao p { font-size: 0.25rem; color: #666; text-align: center; margin-top: 0.28125rem; }
+footer .shangbiao p a { color: #666; }
+
+.bind { width: 100%; height: 1.25rem; background: #fff; padding: 0.15625rem; border-top: 0.07813rem solid #e4e4e4; position: fixed; bottom: 0; left: 0; }
+.bind .dianhua { width: 36%; height: 100%; float: left; }
+.bind .dianhua img { width: 0.59375rem; margin: 0.3125rem 0 0 0.78125rem; float: left; }
+.bind .dianhua p { line-height: 1.25rem; font-size: 0.375rem; margin-left: 0.15625rem; color: #999; float: left; }
+.bind .jjr { width: 60%; height: 100%; background: #66cc00; float: right; text-align: center; line-height: 1.25rem; color: #fff; font-size: 0.4375rem; margin-right: 0.3125rem; }
+.pjstars{
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+  font-size:16px;
+  color: #666666;
+}
+.pjstars a{
+  text-decoration: none;
+  margin: 0px 3px;
+  vertical-align: middle;
+  background: url("../images/xinghui.gif") no-repeat;
+  width: 24px;
+  height: 23px;
+  display: inline-table;
+}
+#xuanzhong{
+  background: url("../images/xing.gif") no-repeat;
+  width: 24px;
+  height: 23px;
+}
+.pjstars strong{
+  font-size:16px;
+  line-height:30px;
+  margin-left: 20px;
+  color: #666666;
+}
+.textarea{
+  min-height: 120px;
+  display: block;
+  width: 98%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size:14px;
+}
+.pjbtns{
+  display: block;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size:16px;
+  color: #ffffff;
+  background: #66cc00;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.plpadding{
+  box-sizing: border-box;
+  padding: 20px 5%;
+}
+.pingmore a{
+  display: block;
+  overflow: hidden;
+  padding: 10px 0px;
+  text-align: center;
+  font-size:16px;
+  color: #555555;
+}
