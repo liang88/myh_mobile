@@ -53,12 +53,13 @@
             <div class="pingjia-middle clear" >
               <div class="pingjia-pic">
                 <div class="pic-kap">
-                  <img src="../assets/images/head.jpg" alt="">
+                  <img :src="pjan.headImg" alt="">
                 </div>
               </div>
               <div class="pingjia-xing">
                 <div class="name clear">
-                  <p>{{pjan.mobile}}</p>
+                  <p v-if="pjan.name == ''">{{pjan.mobile}}</p>
+                  <p v-else>{{pjan.name}}</p>
                   <div v-html="tranxingstart(pjan.score)">
                   </div>
                 </div>
@@ -110,8 +111,25 @@ export default {
   mounted () {
     this.uid()
     this.loadpingjia()
+    this.agentId ()
   },
   methods: {
+    // 点击记录联系客户
+    agentId () {
+      var postid = {
+        userId: getCookie ('userId'),
+        agentId: this.$route.params.id
+      }
+      this.$http.post(myHost + 'myh/saveCalledAgent',postid).then ((response) => {
+        var data = data.resultBean
+        var code = data.code
+        if (code == '0') {
+          console.log('ok')
+        } else {
+          console.log('no')
+        }
+      })
+    },
     uid () {
       var typeinfo = {
         agentId: this.$route.params.id

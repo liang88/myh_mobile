@@ -37,6 +37,7 @@
             </div>
           </div>
         </div>
+        <p class="wu">{{msg}}</p>
       </nav>
     </div>
 </template>
@@ -47,7 +48,8 @@ export default {
   name: 'apply',
   data(){
     return {
-      mbhousedata: {}
+      mbhousedata: {},
+      msg: ''
     }
   },
   mounted(){
@@ -62,16 +64,28 @@ export default {
         console.log(response)
         var data = response.data
         data = data.resultBean
+        var code = data.code
+        if (code == 1) {
+          this.msg = data.message
+        } else {
+          this. msg = ''
+        }
         data = data.object
         this.mbhousedata = data
       })
     }
   }
-}
+};
 </script>
 
 <style scoped>
   .yuyue-content{
     margin-top: 0;
+  }
+  .wu{
+    font-size: 0.4rem;
+    background: #fff;
+    color: #999;
+    text-align: center;
   }
 </style>

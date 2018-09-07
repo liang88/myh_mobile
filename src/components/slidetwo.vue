@@ -1,9 +1,9 @@
 <template>
-  <div id="slide">
+  <div id="slidetwo">
     <!-- 内容 -->
     <nav class="kanfang-content clear">
       <div class="kf-bg">
-        <p>张北 - 北京壹号院   免费预约看房</p>
+        <p>御道庄园   免费预约看房</p>
         <input type="text" placeholder="输入您的姓名" v-model="username" >
         <input type="text" placeholder="输入您的手机号" v-model="userphone" >
         <input type="button" value="提交" @click="open" >
@@ -16,7 +16,7 @@
 <script>
 import { MessageBox } from 'mint-ui';
 export default {
-  name: 'slide',
+  name: 'slidetwo',
   data () {
     return {
       username: '',
@@ -49,7 +49,7 @@ export default {
         return
       }
       var userinfos = {
-        'activityId': 2,
+        'activityId': 1,
         'pName': this.username,
         'pMobile': this.userphone
       }
@@ -82,7 +82,10 @@ export default {
 </script>
 
 <style scoped>
-  #app,#slide{
+  #app,#slidetwo{
     height: 100% !important;
+  }
+  .kanfang-content{
+    background-image: url('../../static/images/yuyuekfy.jpg') !important;
   }
 </style>

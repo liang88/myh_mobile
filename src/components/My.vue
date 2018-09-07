@@ -6,7 +6,7 @@
           <img :src="houseobj.headUrl" alt="">
         </router-link>
         <router-link tag="div" to="/Information" class="head-name">
-          <p>{{houseobj.mobile}}</p>
+          <p>{{houseobj.name}}</p>
         </router-link>
         <router-link tag="div" to="/Set" class="head-set">
           <img src="../assets/images/my/sz.png" alt="">
@@ -27,11 +27,11 @@
               <img src="../assets/images/my/kan.png" alt="">
               <p>浏览纪录</p>
             </router-link>
-            <router-link v-show="myfun03" v-if="this.elsemen == 1"   tag="div" to="/Administrator">
+            <router-link v-if="this.elsemen == 0" v-show="myfun03"  tag="div" to="/Administrator">
               <img src="../assets/images/my/guanli.png" alt="">
               <p>房源管理</p>
             </router-link>
-            <router-link v-show="myfun03" v-else   tag="div" to="/Administrator">
+            <router-link v-show="myfun03" v-else   tag="div" to="/Collectionhouse">
               <img src="../assets/images/my/guanli.png" alt="">
               <p>房源收藏</p>
             </router-link>
@@ -131,11 +131,11 @@ export default {
         this.myfun07 = true
         this.myfun08 = true
       }else if(elsemen==0){
-        this.myfun01 = false
+        this.myfun01 = true
         this.myfun02 = false
-        this.myfun03 = true
+        this.myfun03 = false
         this.myfun04 = true
-        this.myfun05 = true
+        this.myfun05 = false
         this.myfun06 = true
         this.myfun07 = true
         this.myfun08 = false
@@ -149,6 +149,12 @@ export default {
         data = data.resultBean
         data = data.object
         this.houseobj = data
+        if (this.houseobj.name == '') {
+          this.houseobj.name = this.houseobj.mobile
+        }
+        if (this.houseobj.headUrl == '') {
+          this.houseobj.headUrl = 'static/images/logo.png'
+        }
         // console.log(data)
       })
     },

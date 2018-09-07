@@ -53,12 +53,12 @@
                 <div class="hx-img">
                   <img @click="hximgbtn(hx.imgA)" :src="hx.imgA">
                 </div>
-                <!---------浮层----------->
+                <!---------浮层--------- -->
                 <div class="maximg" v-show="maximgshow">
                   <a href="javascript:;" @click="maximgclose"><img src="../assets/images/closes.png" /> </a>
                   <img :src="newmaximg">
                 </div>
-                <!---------浮层----------->
+                <!---------浮层--------- -->
                 <div class="hx-zi">
                   <p>{{hx.layout}} 建筑面积 {{hx.measure}}㎡<span>（{{hx.towards}}）</span></p>
                   <p>均价 <span>{{hx.avgPrice}}</span> 万／套</p>
@@ -90,7 +90,7 @@
             <div class="pingjia-middle clear" >
               <div class="pingjia-pic">
                 <div class="pic-kap">
-                  <img src="../assets/images/head.jpg" alt="">
+                  <img :src="pjan.headUrl" alt="">
                 </div>
               </div>
               <div class="pingjia-xing">
@@ -156,9 +156,13 @@
         </div>
       </nav>
       <div class="bind clear">
-        <div class="guanzhu">
-          <!--<img src="../assets/images/xiangqing/bind1.png" alt="">-->
-          <!--<p>收藏</p>-->
+        <div @click="collection" v-show="collection1" class="guanzhu">
+          <img src="../assets/images/xiangqing/bind1.png" alt="">
+          <p>收藏</p>
+        </div>
+        <div @click="clearcollection" v-show="collection2" class="guanzhu">
+          <img src="../assets/images/xiangqing/bind11.png" alt="">
+          <p style="color: #66cc00;">取消收藏</p>
         </div>
         <!--<div class="quan">-->
           <!--<img src="../assets/images/xiangqing/bind2.png" alt="">-->
@@ -197,7 +201,9 @@ export default {
       currentIndex: '',
       annum: 10,
       currentpj: 1,
-      huxinggo: true
+      huxinggo: true,
+      collection1: true,
+      collection2: false,
     }
   },
   components: {
@@ -208,8 +214,70 @@ export default {
   mounted () {
     this.mhsload()
     this.loadpingjia()
+    this.setcollection ()
   },
   methods: {
+    // 是否收藏
+    setcollection () {
+      var collec = {
+        userId: getCookie ('userId'),
+        houseId: this.$route.params.id
+      }
+      this.$http.post(myHost+ 'myh_web/selectUserColle',collec).then((response) => {
+        var data = response.data
+        data = data.resultBean
+        var code = data.code
+        if (code == '0') {
+          this.collection1 = false
+          this.collection2 = true
+        } else {
+          console.log('no')
+        }
+      })
+    },
+    // 切换收藏
+    iscollection () {
+      this.collection1 = !this.collection1
+      this.collection2 = !this.collection2
+    },
+    // 收藏房源
+    collection () {
+      this.iscollection ()
+      var coll = {
+        userId: getCookie ('userId'),
+        houseId: this.$route.params.id
+      }
+      this.$http.post(myHost+ 'myh_web/collectHouseInfo',coll).then((response) => {
+        var data = response.data
+        data = data.resultBean
+        var code = data.code
+        if (code == '0') {
+          console.log('ok')
+          console.log(code)
+        } else {
+          console.log('no')
+        }
+      })
+    },
+    // 取消收藏
+    clearcollection () {
+      this.iscollection ()
+      var coll = {
+        userId: getCookie ('userId'),
+        houseId: this.$route.params.id
+      }
+      this.$http.post(myHost+ 'myh_web/deleteByUserColle',coll).then((response) => {
+        var data = response.data
+        data = data.resultBean
+        var code = data.code
+        if (code == '0') {
+          console.log('ok')
+          console.log(code)
+        } else {
+          console.log('no')
+        }
+      })
+    },
     mhsload () {
       var myid = this.$route.params.id
       var mypid = this.$route.params.pid
@@ -399,15 +467,23 @@ export default {
       this.loadpingjia()
     }
   }
-}
+};
 </script>
 
 <style scoped>
 @import "../assets/css/xiangqing.css";
 @import "../assets/css/jingji.css";
-  .housesay_banner{
-    height: 200px;
-  }
+nav .pingjia-wap .pingjia .pingjia-middle .pingjia-pic .pic-kap{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+}
+.bind .guanzhu{
+  width: 35%;
+}
+.housesay_banner{
+  height: 200px;
+}
 .housesay_banner img{
   border: none;
   width: 100%;

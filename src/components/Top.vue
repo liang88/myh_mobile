@@ -25,7 +25,8 @@
         <div class="sosu">
           <p>{{youname}}</p>
         </div>
-        <router-link  class="zhuce" tag="a" to="/Register" ><p>注册</p></router-link>
+        <router-link v-if="!isLogin"  class="zhuce" tag="a" to="/Register" ><p>注册</p></router-link>
+        <router-link v-else  class="zhuce" tag="a" to="/" ><img src="../assets/images/index/logo.png" alt=""></router-link>
       </div>
     </header>
   </div>
@@ -98,7 +99,7 @@ export default {
       //  this.nowphone = this.$store.getters.phone
     }
   }
-}
+};
 </script>
 
 <style scoped>

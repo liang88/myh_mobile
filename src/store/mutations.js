@@ -104,6 +104,12 @@ const mutations = {
       state.youname = '忘记密码'
       return
     }
+    if (data == 'Mycomment') {
+      state.tabtop = false
+      state.topall = true
+      state.youname = '我的评论'
+      return
+    }
     if (data == 'My') {
       state.tabtop = false
       state.topall = true
@@ -161,7 +167,37 @@ const mutations = {
     if (data == 'Slide') {
       state.tabtop = false
       state.topall = false
-      state.youname = '123'
+      state.youname = '报名'
+      return
+    }
+    if (data == 'Slidetwo') {
+      state.tabtop = false
+      state.topall = false
+      state.youname = '报名'
+      return
+    }
+    if (data == 'Informationupload') {
+      state.tabtop = false
+      state.topall = true
+      state.youname = '编辑头像'
+      return
+    }
+    if (data == 'Informationname') {
+      state.tabtop = false
+      state.topall = true
+      state.youname = '编辑昵称'
+      return
+    }
+    if (data == 'Informationpassword') {
+      state.tabtop = false
+      state.topall = true
+      state.youname = '修改密码'
+      return
+    }
+    if (data == 'Collectionhouse') {
+      state.tabtop = false
+      state.topall = true
+      state.youname = '房源收藏'
       return
     }
   },

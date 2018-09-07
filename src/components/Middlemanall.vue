@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import { getCookie } from '../util/cookie'
 export default {
   name: 'middleman',
   data () {
@@ -103,6 +104,7 @@ export default {
         data = data.object
         data = data.list
         this.middle = data
+        
       })
     },
     middlemore() {
@@ -137,9 +139,25 @@ export default {
         }
 
       })
-    }
+    },
+    // 点击记录联系客户
+    // agentId () {
+    //   var postid = {
+    //     userId: getCookie ('userId'),
+    //     agentId: this.$route.params.id
+    //   }
+    //   this.$http.post(myHost + 'myh/saveCalledAgent',postid).then ((response) => {
+    //     var data = data.resultBean
+    //     var code = data.code
+    //     if (code == '0') {
+    //       console.log('ok')
+    //     } else {
+    //       console.log('no')
+    //     }
+    //   })
+    // }
   }
-}
+};
 </script>
 
 <style scoped>

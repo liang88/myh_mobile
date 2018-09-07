@@ -20,7 +20,8 @@ export default {
     }
   },
   mounted(){
-    //this.loadpanduan()
+    // this.loadpanduan()
+    // this.is_weixn()
   },
   methods:{
     loadpanduan(){
@@ -35,14 +36,23 @@ export default {
       var bIsWM = sUserAgent.match(/windows mobile/i) == 'windows mobile'
       if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         // 跳转移动端页面
-        window.location.href = 'http://m.manyihefc.com/#//'
+        window.location.href = 'http://m.manyihefc.com/#/'
       } else {
         // 跳转pc端页面
         window.location.href = 'http://www.manyihefc.com/#/'
       }
+    },
+    is_weixn(){
+      var ua = navigator.userAgent.toLowerCase();
+      var that = this
+      if(ua.match(/MicroMessenger/i)=="micromessenger") { 
+        that.$router.push('/Slide')
+      } else { 
+        that.$router.push('/')
+      } 
     }
   }
-}
+};
 </script>
 
 <style>

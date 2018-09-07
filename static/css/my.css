@@ -226,7 +226,7 @@ input::-webkit-input-placeholder { color: #999; opacity: 1; }
 .jingji-content .con-head { width: 80%; margin: 0 auto; margin-top: 0.4rem; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; -webkit-justify-content: center; }
 .jingji-content .con-head div { width: 50%; height: 1rem; text-align: center; border-bottom: 1px solid #eee; }
 .jingji-content .con-head div span { padding: 0.26667rem 0; font-size: 0.4rem; color: #333; line-height: 1rem; }
-.jingji-content .con-head div:nth-child(2) span { color: #009933; border-bottom: 1px solid #009933; }
+.jingji-content .con-head div .bg { color: #009933; border-bottom: 1px solid #009933; }
 .jingji-content .con-nav { width: 100%; background: #fff; letter-spacing: 1px; }
 .jingji-content .con-nav .list { width: 100%; padding: 0.46667rem 0; border-bottom: 0.01333rem solid #eee; }
 .jingji-content .con-nav .list .list-middle { width: 88%; margin: 0 auto; }

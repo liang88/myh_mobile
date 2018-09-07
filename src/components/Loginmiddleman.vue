@@ -124,7 +124,8 @@ export default {
           this.lgnumber = 0
           setCookie('myhPhone',obj.mobile,5)
           setCookie('ifuser', this.lgnumber, 5)
-          this.$store.dispatch('loginSave',{myhPhone:obj.moblie,ifuser:this.lgnumber})
+          setCookie('agentId', obj.id, 5)
+          this.$store.dispatch('loginSave',{myhPhone:obj.moblie,ifuser:this.lgnumber,agentId:obj.id})
           this.$router.push('/')
         }
       })

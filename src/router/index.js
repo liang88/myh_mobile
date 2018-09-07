@@ -26,6 +26,11 @@ import Feedback from '../components/Feedback'
 import Apply from '../components/Apply'
 import Mycomment from  '../components/Mycomment'
 import Slide from '../components/Slide'
+import Slidetwo from '../components/Slidetwo'
+import Informationupload from '../components/Informationupload'
+import Informationname from '../components/Informationname'
+import Informationpassword from '../components/Informationpassword'
+import Collectionhouse from '../components/Collectionhouse'
 Vue.use(Router)
 
 export default new Router({
@@ -169,6 +174,31 @@ export default new Router({
       path: '/Slide',
       name: 'Slide',
       component: Slide
+    },
+    {
+      path: '/Slidetwo',
+      name: 'Slidetwo',
+      component: Slidetwo
+    },
+    {
+      path: '/Informationupload',
+      name: 'Informationupload',
+      component: Informationupload
+    },
+    {
+      path: '/Informationname',
+      name: 'Informationname',
+      component: Informationname
+    },
+    {
+      path: '/Informationpassword',
+      name: 'Informationpassword',
+      component: Informationpassword
+    },
+    {
+      path: '/Collectionhouse',
+      name: 'Collectionhouse',
+      component: Collectionhouse
     }
   ],
   scrollBehavior: () => ({ y: 0 })

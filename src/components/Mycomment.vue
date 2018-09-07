@@ -1,11 +1,11 @@
 <template>
     <div id="my-comment">
       <div class="comment_title">
-        <a @click="tabcomm(1)" :class="this.tabcons==1?'comment_a':''" href="javascript:return 0">一手房</a>
-        <a @click="tabcomm(0)" :class="this.tabcons==0?'comment_a':''" href="javascript:return 0">楼盘</a>
-        <a @click="tabcomm(2)" :class="this.tabcons==2?'comment_a':''" href="javascript:return 0">经纪人</a>
+        <a @click="tabcomm(1)" :class="this.tabcons==1?'comment_a':''" href="javascript:">一手房</a>
+        <a @click="tabcomm(0)" :class="this.tabcons==0?'comment_a':''" href="javascript:">楼盘</a>
+        <a @click="tabcomm(2)" :class="this.tabcons==2?'comment_a':''" href="javascript:">经纪人</a>
       </div>
-      <nav v-if="this.tabcons==1">
+      <nav v-if="this.tabcons==1" v-show="s1" >
         <div class="mycomment" v-for="mcs in datacomment">
           <div class="jieshao">
           <div class="js-dan">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </nav>
-      <nav v-if="this.tabcons==0">
+      <nav v-if="this.tabcons==0" v-show="s2" >
         <div class="mycomment" v-for="mcs in datacomment">
           <div class="jieshao">
             <div class="js-dan">
@@ -61,7 +61,7 @@
           </div>
         </div>
       </nav>
-      <nav v-if="this.tabcons==2">
+      <nav v-if="this.tabcons==2" v-show="s3" >
         <div class="wap"  v-for="pljingji in pinglundatabase1">
           <div class="list">
             <div class="list-middle clear">
@@ -103,7 +103,10 @@ export default {
       tabmessages: '',
       messages: false,
       datacomment: {},
-      pinglundatabase1: {}
+      pinglundatabase1: {},
+      s1: true,
+      s2: false,
+      s3: false,
     }
   },
   mounted () {
@@ -112,7 +115,18 @@ export default {
   methods: {
     tabcomm(e){
       this.tabcons = e
-      if(this.tabcons==2){
+      if(this.tabcons == 1){
+        this.s1 = true
+        this.s2 = false
+        this.s3 = false
+      } else if (this.tabcons == 0) {
+        this.s1 = false
+        this.s2 = true
+        this.s3 = false
+      } else if (this.tabcons == 2) {
+        this.s1 = false
+        this.s2 = false
+        this.s3 = true
         this.sctranclick()
         return
       }
@@ -124,7 +138,7 @@ export default {
           pageSize: 10
         }
       }
-      console.log(cominfo)
+      // console.log(cominfo)
       this.$http.post(myHost+'myh_web/viewAllMyComm', cominfo).then((response)=>{
         // console.log(response)
         var data = response.data
@@ -138,7 +152,7 @@ export default {
           data = data.object
           data = data.list
           for(var i=0;i<data.length;i++){
-            data[i].myfeaures = data[i].feature.split(',')
+            data[i].myfeaures = data[i].feature.split(',').slice(0,3)
           }
           this.datacomment = data
           // console.log(this.datacomment)
@@ -154,12 +168,20 @@ export default {
         }
       }
       this.$http.post(myHost+'myh_web/viewMyCommOfAgent', pltrans).then((response)=> {
-        console.log(response)
+        // console.log(response)
         var data = response.data
         data = data.resultBean
-        data = data.object
-        data = data.list
-        this.pinglundatabase1 = data
+        var code = data.code
+        if (code == '1') {
+          this.tabmessages= data.message
+          this.messages = true
+          // console.log(data.message)
+        } else {
+          data = data.object
+          data = data.list
+          this.pinglundatabase1 = data
+          // console.log('no')
+        }
       })
     }
   }
@@ -169,6 +191,13 @@ export default {
 <style scoped>
   @import "../assets/css/xinfang.css";
   @import "../assets/css/jingji-t.css";
+  nav .jieshao .js-dan .js-dan-middle .js-zi .d2 .hadress{
+    display: block;
+    width: 2.5rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
   .comment_title{
     display: block;
     line-height: 40px;

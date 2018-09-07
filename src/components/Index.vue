@@ -29,7 +29,7 @@
           </div>
         </div>
       </router-link>
-      <a href="###" @click="hotlp"   class="gengd">
+      <a href="javascript:" @click="hotlp"   class="gengd">
         更多推荐
       </a>
     </div>
@@ -71,6 +71,7 @@
 <script>
 import Bannerview from './Bannerindex'
 import Classblock from './Classblock'
+import { setCookie,getCookie } from '../util/cookie'
 export default {
   name: 'hello',
   data () {
@@ -85,9 +86,42 @@ export default {
   },
   mounted () {
     this.homebtn()
-    this.is_weixn()
+    this.uv ()
   },
   methods: {
+    uv () {
+      var that = this
+      var myDate = new Date()
+      var y = myDate.getFullYear()
+      var m = myDate.getMonth() + 1
+      var d = myDate.getDate()
+      var time = y+'-'+m+'-'+d
+      var ip = returnCitySN["cip"]
+      var gettime = getCookie('time')
+      var getip = getCookie('ip')
+      if (gettime == null || getip == null) {
+        that.$http.post(myHost+ 'myh_web/countUv').then((response) => {
+          setCookie ('time',time,24)
+          setCookie ('ip',ip,24)
+          // console.log('okk')
+        })
+      } else {
+        if (time == gettime && ip == getip ) {
+          console.log('ok')
+        } else {
+          console.log('no')
+          that.$http.post(myHost+'myh_web/countUv').then((response)=>{
+            setCookie ('time',time,24)
+            setCookie ('ip',ip,24)
+          })
+        }
+      }
+      // console.log(time)
+      // console.log(ip)
+      // console.log(gettime)
+      // console.log(getip)
+
+    },
     homebtn () {
       var infos = {
         type: 1
@@ -135,20 +169,16 @@ export default {
         this.indexdate = data
       })
     },
-    is_weixn(){ 
-      var ua = navigator.userAgent.toLowerCase();
-      var that = this
-      if(ua.match(/MicroMessenger/i)=="micromessenger") { 
-        that.$router.push('/Slide')
-      } else { 
-        that.$router.push('/')
-      } 
-    }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  #mtswipe{
+    height: 5.5rem !important;
+  }
+  #mtswipe img{
+    height: 100% !important;
+  }
 </style>
